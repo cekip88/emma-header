@@ -10,9 +10,10 @@ $unit: 'px'
       flex-wrap: wrap
       align-items: center
       justify-content: space-between
+    &-contact
+      display: none
   &-contact
     &-whatsapp,&-address
-      display: none
       svg
         fill: $dark-gray
   &-logo
@@ -31,7 +32,7 @@ $unit: 'px'
     &-left-link,&-right-web,&-right-win
       +w(100%)
       text-align: left
-      display: block
+      display: flex
       padding: 15px 0 15px 20px
       font-family: $f_bold
       color: $light-gray

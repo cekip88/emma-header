@@ -2,7 +2,8 @@
 @import "../../../../core/mixins/mixins"
 @import "vars"
 $font_body: 14px
-+font_inc($f_reg,'roboto-regular.ttf')
++font_inc($f_reg,'Raleway-Regular.ttf')
++font_inc($f_bold,'Raleway-SemiBold.ttf')
 .set
 	+wh(100%)
 html,body
@@ -10,7 +11,7 @@ html,body
 	overflow-x: hidden
 body
 	+wh(100%)
-	+font($font_body,$f_reg,$black)
+	+font($font_body,$f_reg,$dark-gray)
 
 input,button
 	font-family: inherit
@@ -20,17 +21,17 @@ input
 	background-color: transparent
 	border: none
 
+img,svg
+	max-width: 100%
+
+
 $unit: 'px'
 
-+mq($mobile#{$unit})
-	@import "media/m"
-+mq($mobile-large#{$unit})
-	@import "media/ml"
+
+@import "media/m"
 +mq($tablet#{$unit})
 	@import "media/t"
-+mq($tablet-large#{$unit})
-	@import "media/tl"
 +mq($desktop#{$unit})
 	@import "media/d"
-+mq($desktop-large#{$unit})
-	@import "media/dl"
++mq($fullHD#{$unit})
+	@import "media/fh"

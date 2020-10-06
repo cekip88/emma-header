@@ -1,2 +1,52 @@
-header
-	section
+header.head
+    section.head-top-line
+        ul.head-row.head-top-list.section
+            li.head-top-item.head-logo
+                a(href='#').head-loog-link
+                    include ../../img/logo.svg
+            li.head-top-item
+                button.head-burger
+                    span
+            li.head-top-item.head-top-contact
+                ul.head-contact-list
+                    li.head-contact-item
+                        a(href='#').head-contact-whatsapp
+                            include ../../img/phone.svg
+                            span 053 434 8145
+                    li.head-contact-item
+                        .head-contact-address
+                            include ../../img/address.svg
+                            span Emmastraat 189, 7513 BC Enschede
+    section.head-bottom-line
+        ul.head-row.head-bottom-list.section
+            li.head-bottom-item
+                nav.head-bottom-left
+                    ul.head-bottom-left-list
+                        li.head-bottom-left-item.head-mobile
+                            a(href='#').head-bottom-left-link
+                                span 053 434 8145
+                        li.head-bottom-left-item.head-mobile
+                            .head-bottom-left-link
+                                span Emmastraat 189, 7513 BC Enschede
+                        li.head-bottom-left-item
+                            a(href='#').head-bottom-left-link
+                                span Home
+                        li.head-bottom-left-item
+                            a(href='#').head-bottom-left-link
+                                span Over ons
+                        li.head-bottom-left-item
+                            a(href='#').head-bottom-left-link
+                                span Blog
+                        li.head-bottom-left-item
+                            a(href='#').head-bottom-left-link
+                                span Contact
+            li.head-bottom-item
+                nav.head-bottom-right
+                    ul.head-bottom-right-list
+                        li.head-bottom-right-item
+                            button.head-bottom-right-web
+                                span Webshop
+                        li.head-bottom-right-item
+                            button.head-bottom-right-win
+                                include ../../img/win.svg
+                                span Winkelmand

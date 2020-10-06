@@ -1,3 +1,63 @@
 $unit: 'px'
 .section
-  +w($mobile#{$unit})
+  +w(100%)
+  padding: 0 10px
+
+.head
+  &-top
+    &-list
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+  &-contact
+    &-whatsapp,&-address
+      display: none
+      svg
+        fill: $dark-gray
+  &-logo
+    +w(150px)
+  &-burger
+    +wh(32px)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 5px
+    &:before,&:after,span
+      +af
+      +wh(100%,2px)
+      background-color: $dark-gray
+  &-bottom
+    &-left-link,&-right-web,&-right-win
+      +w(100%)
+      text-align: left
+      display: block
+      padding: 15px 0 15px 20px
+      font-family: $f_bold
+      color: $light-gray
+      svg
+        display: none
+    &-left-item:first-child:before
+      +af
+      +wh(100%,1px)
+      background-color: $light-gray
+      opacity: .3
+    &-left,&-right
+      &-item
+        &:after
+          +af
+          +wh(100%,1px)
+          background-color: $light-gray
+          opacity: .3
+    &-list
+      transform: translateX(-100%)
+      transition: .2s ease
+      position: absolute
+      background-color: $white
+    &-right
+      &-win
+        svg
+          fill: $white
+  &-active
+    .head-bottom-list
+        transform: translateX(0)

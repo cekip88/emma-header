@@ -1,3 +1,45 @@
 $unit: 'px'
 .section
-  +w($desktop#{$unit})
+  width: 1200px
+  margin: 0 auto
+  position: relative
+
+.head
+  &-logo
+    margin: 0 auto
+    transition: .2s ease
+    &:hover
+      transform: scale(1.15)
+  &-top
+    &-line
+      font-size: 23px
+  &-contact
+    &-whatsapp
+      span,svg
+        transition: .2s ease
+      &:hover
+        span
+          color: $red
+        svg
+          fill: $red
+  &-bottom
+    &-line
+      font-size: 30px
+    &-left
+      &-link
+        transition: .2s ease
+        &:hover
+          span
+            opacity: .5
+    &-right
+      &-web
+        transition: .2s ease
+        font-size: 21px
+        &:hover
+          border-color: $white
+          background-color: transparent
+      &-win
+        font-size: 19px
+        transition: .2s ease
+        &:hover
+          opacity: .5

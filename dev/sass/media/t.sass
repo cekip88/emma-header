@@ -1,3 +1,62 @@
 $unit: 'px'
+
 .section
-  +w($tablet#{$unit})
+  padding: 0 44px 0 53px
+
+
+.head
+  &-burger,&-mobile
+    display: none
+  &-logo
+    +w(188px)
+  &-top
+    &-line
+      font-size: 18px
+      padding: 25px 0 15px
+    &-contact
+      position: absolute
+      right: 44px
+  &-contact
+    &-whatsapp,&-address
+      display: flex
+      align-items: center
+      margin: 10px 0
+      svg
+        margin-right: 10px
+  &-bottom
+    &-line
+      background-color: $blue
+      font-size: 18px
+    &-list
+      position: static
+      background-color: transparent
+      transform: translateX(0)
+      justify-content: space-between
+      &, a, button
+        color: $white
+    &-list,&-left-list,&-right-list
+      display: flex
+      align-items: center
+    &-left-item,&-right-item
+      &:after
+        content: none
+    &-left-link
+      padding: 23px 16px
+    &-left
+      &-list
+        transform: translateX(-16px)
+    &-right
+      &-item:first-child
+        margin-right: 25px
+      &-web
+        padding: 6px 30px
+        border: 2px solid transparent
+        background-color: $green
+        border-radius: 5px
+      &-win
+        padding: 23px 0
+        svg,span
+          display: inline-block
+          vertical-align: middle
+        svg
+          margin-right: 7px

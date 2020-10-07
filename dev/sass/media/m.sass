@@ -1,10 +1,16 @@
 $unit: 'px'
+
+#page-container
+  padding-top: 0!important
+
 .section
   +w(100%)
-  padding: 0 10px
+  padding: 0 20px
 
 .head
   &-top
+    &-line
+      padding: 10px 0
     &-list
       display: flex
       flex-wrap: wrap
@@ -13,13 +19,14 @@ $unit: 'px'
     &-contact
       display: none
   &-contact
-    &-whatsapp,&-address
-      svg
-        fill: $dark-gray
+    &-item
+      a,div
+        svg
+          fill: $dark-gray
   &-logo
-    +w(150px)
+    +w(100px)
   &-burger
-    +wh(32px)
+    +wh(40px,35px)
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -27,9 +34,10 @@ $unit: 'px'
     &:before,&:after,span
       +af
       +wh(100%,2px)
+      transition: .2s ease
       background-color: $dark-gray
   &-bottom
-    &-left-link,&-right-web,&-right-win
+    &-left-item a,&-left-item div,&-right-web,&-right-win
       +w(100%)
       text-align: left
       display: flex
@@ -54,6 +62,7 @@ $unit: 'px'
       transform: translateX(-100%)
       transition: .2s ease
       position: absolute
+      z-index: 10
       background-color: $white
     &-right
       &-win
@@ -62,3 +71,11 @@ $unit: 'px'
   &-active
     .head-bottom-list
         transform: translateX(0)
+    .head-burger
+      span
+        opacity: 0
+        visibility: hidden
+      &:before
+        transform: rotate(45deg) translate(9px,8px)
+      &:after
+        transform: rotate(-45deg) translate(8px,-7px)

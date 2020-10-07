@@ -1,6 +1,7 @@
 $unit: 'px'
 .section
   position: relative
+  padding: 0 64px 0 65px
 
 .head
   &-logo
@@ -10,7 +11,9 @@ $unit: 'px'
       transform: scale(1.15)
   &-top
     &-line
-      font-size: 23px
+      font-size: 21.4px
+    &-contact
+      right: 104px
   &-contact
     &-whatsapp
       span,svg
@@ -22,22 +25,24 @@ $unit: 'px'
           fill: $red
   &-bottom
     &-line
-      font-size: 30px
+      font-size: 28px
     &-left
-      &-link
-        transition: .2s ease
-        &:hover
-          span
+      padding-left: 50px
+      &-item
+        a
+          transition: .2s ease
+          &:hover
             opacity: .5
     &-right
+      padding-right: 40px
       &-web
         transition: .2s ease
-        font-size: 21px
+        font-size: 19px
         &:hover
           border-color: $white
           background-color: transparent
       &-win
-        font-size: 19px
+        font-size: 17px
         transition: .2s ease
         &:hover
           opacity: .5

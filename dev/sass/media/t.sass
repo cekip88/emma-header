@@ -8,22 +8,26 @@ $unit: 'px'
   &-burger,&-mobile
     display: none
   &-logo
-    +w(188px)
+    +w(173px)
   &-top
     &-line
       font-size: 18px
-      padding: 25px 0 15px
+      padding: 19px 0 2px
     &-contact
       display: block
       position: absolute
       right: 44px
   &-contact
-    &-whatsapp,&-address
-      display: flex
-      align-items: center
-      margin: 10px 0
-      svg
-        margin-right: 10px
+    &-item
+      &:first-child
+        margin-bottom: 10px
+      a,div
+        display: flex
+        align-items: center
+        span
+          margin-bottom: 5px
+        svg
+          margin-right: 10px
   &-bottom
     &-line
       background-color: $blue
@@ -41,11 +45,12 @@ $unit: 'px'
     &-left-item,&-right-item
       &:after
         content: none
-    &-left-link
-      padding: 23px 16px
     &-left
       &-list
         transform: translateX(-16px)
+      &-item
+        a
+          padding: 23px 15.5px
     &-right
       &-item:first-child
         margin-right: 25px
@@ -54,6 +59,7 @@ $unit: 'px'
         border: 2px solid transparent
         background-color: $green
         border-radius: 5px
+        transform: translate(3px,2px)
       &-win
         padding: 20px 0
         display: flex
@@ -61,3 +67,5 @@ $unit: 'px'
         svg
           display: block
           margin-right: 7px
+        span
+          margin-top: 10px
